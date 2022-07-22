@@ -1,14 +1,10 @@
 import React from "react";
+import {createRoot} from "react-dom/client"
 import App from "./App";
 
+const root = createRoot(document.getElementById("root"))
 
-
-render default class Index extends React.Component{
-    render(){
-        return (
-            <div>
-                <App />
-            </div>
-        )
-    }
-}
+root.render(
+<App/>
+    
+)
