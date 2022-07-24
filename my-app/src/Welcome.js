@@ -6,3 +6,7 @@ export default class Welcome extends React.Component{
         return <p>Hello, {this.props.name} </p>
     }
 }
+
+Welcome.defaultProps = {
+    name: "Jonathan"
+  }
