@@ -20,9 +20,9 @@ export class Age extends React.Component{
         
         return(
             <div> 
-                {this.props.age > 18
+                {this.props.age
                 ? (<p>Your age is {this.props.age}</p> ) 
-                : (<p>Non hai l'età giusta</p>)}
+                : (<p>Non ho un parametro valido</p>)}
             </div>
         )
         
