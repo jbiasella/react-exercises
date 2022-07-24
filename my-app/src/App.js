@@ -1,7 +1,9 @@
 import React from "react";
+import Counter from "./Counter";
 import Hello from "./Hello";
 import Welcome from "./Welcome";
 import WelcomeDefault from "./WelcomeDefault";
+
 
 
 export default class App extends React.Component{
@@ -11,6 +13,7 @@ export default class App extends React.Component{
                 <Hello />
                 <Welcome name="Jhon" age="25"/>
                 <WelcomeDefault />
+                <Counter/>
             </div>
         )
     }
