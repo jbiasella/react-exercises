@@ -4,7 +4,6 @@ import Welcome from "./Welcome";
 import WelcomeDefault from "./WelcomeDefault";
 
 
-
 export default class App extends React.Component{
     render(){
         return (
