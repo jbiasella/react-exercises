@@ -10,7 +10,7 @@ export default class App extends React.Component{
         return (
             <div>
                 <Hello />
-                <Welcome name={<strong>Graziano</strong>}/>
+                <Welcome name={<strong>Graziano</strong>} age="25"/>
                 <WelcomeDefault />
             </div>
         )
