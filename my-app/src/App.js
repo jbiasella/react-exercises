@@ -6,7 +6,7 @@ import Hello from "./Hello";
 import Welcome from "./Welcome";
 import WelcomeDefault from "./WelcomeDefault";
 import  InteractiveWelcome from "./InteractiveWelcome";
-
+import Login from "./Login";
 
 export default class App extends React.Component{
     render(){
@@ -19,6 +19,7 @@ export default class App extends React.Component{
                 <ClickCounter />
                 <ClickTracker/>
                 <InteractiveWelcome/>
+                <Login/>
             </div>
         )
     }
