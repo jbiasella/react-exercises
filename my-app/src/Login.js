@@ -6,30 +6,34 @@ export default class Login extends React.Component{
     state = {
         username: '',
         password: '',
-        checkbox: false,
+        compiled: false,
     }
 
     handleInputChange = (event) => {
         const value = event.target.value
         const name = event.target.name
-        const type = event.target.type
-        const checked = event.target.checked
+        
 
         this.setState({
-            [name]: type === 'checkbox' ? checked : value // se(?) il mio type è di tipo checkbox userò checked, altrimenti(:) userò value
-
+            [name]: value, // se(?) il mio type è di tipo checkbox userò checked, altrimenti(:) userò value
+            compiled: this.state.username !== "" && this.state.password !== "" ? true : false
            
         })
+       
     }
+
+    
 
     render(){
         return(
             <div>
 
                 <div>
-                    <input name="username"/>
-                    <input name="password" type='password'/>
-                    <input name="checkbox" type="checkbox"/>
+                    <input name="username" type ='text' value={this.state.username} onChange={this.handleInputChange}/>
+                    <input name="password" type='password' value={this.state.password} onChange={this.handleInputChange}/>
+
+                    <button disabled = {!this.state.compiled}>LOGIN</button>
+                               
                 </div>
 
             </div>
