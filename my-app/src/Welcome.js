@@ -7,7 +7,9 @@ export default class Welcome extends React.Component{
         return (
             <div>
             <p>Hello, {this.props.name} </p>
-            <Age age={this.props.age} />
+            {this.props.age ? <Age age={this.props.age} /> 
+                            :<p>Non ho un parametro valido!</p>}
+           
             </div> 
         )
     }
@@ -20,9 +22,9 @@ export class Age extends React.Component{
         
         return(
             <div> 
-                {this.props.age
-                ? (<p>Your age is {this.props.age}</p> ) 
-                : (<p>Non ho un parametro valido</p>)}
+                
+                <p>Your age is {this.props.age}</p>
+              
             </div>
         )
         
