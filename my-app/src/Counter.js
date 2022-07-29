@@ -7,9 +7,9 @@ export default class Counter extends React.Component{
     super(props)
     setInterval(() =>{
         this.setState({
-            count: this.state.count + this.props.incrementInterval
+            count: this.state.count + this.props.incrementAmount
         })
-    }, this.props.incrementAmount)
+    }, this.props.incrementInterval)
  }   
 render(){
     return <h1>{this.state.count}</h1>
