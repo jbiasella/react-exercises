@@ -16,11 +16,28 @@ export default class Login extends React.Component{
 
         this.setState({
             [name]: value, // se(?) il mio type è di tipo checkbox userò checked, altrimenti(:) userò value
-            compiled: this.state.username !== "" && this.state.password !== "" ? true : false
-           
+            compiled: this.state.username !== "" && this.state.password !== "" ? true : false,
+            
+            
         })
+
+
+
+        }
+
+        resetState = () => {
+            
+            this.setState({
+                username: '',
+                password: '',
+                compiled: false,
+
+            })
        
     }
+
+
+
 
     
 
@@ -33,7 +50,7 @@ export default class Login extends React.Component{
                     <input name="password" type='password' value={this.state.password} onChange={this.handleInputChange}/>
 
                     <button disabled = {!this.state.compiled}>LOGIN</button>
-                               
+                    <button type="reset" name="reset" onClick={this.resetState}>RESET</button>           
                 </div>
 
             </div>
