@@ -1,58 +1,34 @@
-import React from "react"
+import React from 'react';
 
 
-export default class Login extends React.Component{
+export class UncontrolledLogin extends React.Component{
 
-    state = {
-        username: '',
-        password: '',
-        compiled: false,
-    }
+    handleUncontrolledForm = (event) =>{
+        event.preventDefault()
 
-    handleInputChange = (event) => {
-        const value = event.target.value
-        const name = event.target.name
-        
+        const username = event.target.elements.username.value
+        const password = event.target.elements.password.value
+        const remember = event.target.elements.remember.checked
 
-        this.setState({
-            [name]: value, // se(?) il mio type è di tipo checkbox userò checked, altrimenti(:) userò value
-            compiled: this.state.username !== "" && this.state.password !== "" ? true : false,
-            
-            
-        })
-
-
-
+        console.log({
+            username, 
+            password,
+            remember
         }
-
-        resetState = () => {
-            
-            this.setState({
-                username: '',
-                password: '',
-                compiled: false,
-
-            })
-       
+        )
     }
-
-
-
-
-    
 
     render(){
         return(
             <div>
-
-                <div>
-                    <input name="username" type ='text' value={this.state.username} onChange={this.handleInputChange}/>
-                    <input name="password" type='password' value={this.state.password} onChange={this.handleInputChange}/>
-
-                    <button disabled = {!this.state.compiled}>LOGIN</button>
-                    <button type="reset" name="reset" onClick={this.resetState}>RESET</button>           
-                </div>
-
+                <h2>UNCONTROLLED LOGIN</h2>
+            
+            <form onSubmit={this.handleUncontrolledForm}>
+                <input type= "text" name= "username" />
+                <input type= "password" name= "password" />
+                <input type= "checkbox" name= "remember" />
+                <button type="submit">Login</button>
+                </form>
             </div>
         )
     }
