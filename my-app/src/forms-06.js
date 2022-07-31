@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-export class UncontrolledLogin extends React.Component{
+export default class UncontrolledLogin extends React.Component{
 
     handleUncontrolledForm = (event) =>{
         event.preventDefault()
