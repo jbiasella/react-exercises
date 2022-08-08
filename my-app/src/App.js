@@ -9,7 +9,7 @@ import { Container } from "./Container";
 export default class App extends React.Component{
     render(){
         return (
-            <Container>
+            <Container title="My Awesome Container">
                 <Hello />
                 <Welcome name="Jhon" age="25"/>
                 <WelcomeDefault />
