@@ -48,12 +48,29 @@ export default class TodoList extends React.Component {
   render() {
     return (
       <div>
-        <ul>{this.state.items.map((item, index) => <li key={index}>{item}</li>)}</ul>
+        <ul>{this.state.items.map((item, index) => 
+        <>
+        <li key={index}>{item}</li>
+        <button onClick={(event)=>{
+          event.preventDefault()
+          this.state.items.splice(index, 1)
+          this.setState({
+            items: this.state.items,
+            name:''
+          })
+        }}>
+          <strong>Remove</strong>
+        </button>
+
+        </>
+        
+        )}
+        </ul>
         <form onSubmit={this.addElementToList}>
           <input type="text" name="newItem" value={this.state.name} onChange={this.handleControlledNameChange} />
           <button type="submit" name="addToList">Add to list</button>
           <button name="reset" onClick={this.resetList}>reset</button>
-          <button name="removeItem" onClick={this.removeListElement}>remove list element</button>
+          
         </form>
       </div>
     )
