@@ -1,11 +1,11 @@
 import React from "react";
 
-export default class WelcomeDefault extends React.Component{
-    render() {
-        return <p>Hello, <em>{this.props.name}</em> </p>
-    }
+export function WelcomeDefault({name="Name not defined"}){
+    
+        return(
+                <p>Hello, <em>{name}</em> </p>
+        )
+         
+    
 }
 
-WelcomeDefault.defaultProps = {
-    name: "Name not defined"
-  }

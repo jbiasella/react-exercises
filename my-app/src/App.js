@@ -6,8 +6,8 @@ import WelcomeDefault from "./WelcomeDefault";
 
 
 
-export default class App extends React.Component{
-    render(){
+export function App(){
+    
         return (
             <div>
                 <Hello />
@@ -17,5 +17,5 @@ export default class App extends React.Component{
                 
             </div>
         )
-    }
+    
 }
