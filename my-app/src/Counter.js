@@ -3,7 +3,9 @@ import React, { useEffect, useState } from 'react';
 export function HookCounter({initialValue = 0, onCounterChange}){
     const [counter, setCounter] = useState(initialValue);
 
-    useEffect(()=>{onCounterChange(counter)}, [counter,onCounterChange])
+    useEffect(()=>{
+        const intervalCounter = setInterval(()=>{ setCounter(counter + 1)},1000)
+        return () =>{clearInterval(intervalCounter)}}, [counter])
 
     function handleCounterIncrement(){
         setCounter(c => c + 1)
