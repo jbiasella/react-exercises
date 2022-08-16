@@ -1,5 +1,6 @@
 import React from "react";
 import { HookCounter} from "./Counter";
+import { LoginForm } from "./Login";
 // import {Hello} from "./Hello";
 // import {Welcome} from "./Welcome";
 // import {WelcomeDefault} from "./WelcomeDefault";
@@ -12,7 +13,7 @@ export function App(){
             <div>
                 
                 <HookCounter />
-                
+                <LoginForm/>
             </div>
         )
     
