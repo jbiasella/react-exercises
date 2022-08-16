@@ -12,8 +12,7 @@ export function App(){
         return (
             <div>
                 
-                <HookCounter />
-                <LoginForm/>
+                <HookCounter initialValue={2} onCounterChange={(counter)=>{console.log(`the counter is now ${counter}`)}}/>                <LoginForm/>
             </div>
         )
     

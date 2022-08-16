@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-export function Counter({initialValue = 0, onCounterChange}){
+export function HookCounter({initialValue = 0, onCounterChange}){
     const [counter, setCounter] = useState(initialValue);
 
     useEffect(()=>{onCounterChange(counter)}, [counter,onCounterChange])
