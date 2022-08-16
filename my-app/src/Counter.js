@@ -1,32 +1,25 @@
-import React from "react"
+import { useState } from "react"
 
-export default class Counter extends React.Component{
-    state= { count: this.props.value}
-
-//  constructor(props){
-//     super(props)
-//     setInterval(() =>{
-//         this.setState({
-//             count: this.state.count + this.props.incrementInterval
-//         })
-//     }, this.props.incrementAmount)
-//  }   
-
-componentDidMount() {
-     setInterval(() =>{
-                this.setState({
-                    count: this.state.count + this.props.incrementInterval
-                })
-            }, this.props.incrementAmount)}
-
-
- render(){
-    return <CounterDisplay DisplayCount={this.state.count}/>
- }
-}
-
-export class CounterDisplay extends React.Component{
-    render(){
-        return <h1>{this.props.DisplayCount}</h1>
+export function HookCounter({ initialValue = 0}){
+    
+    const [counter, setCounter] = useState(initialValue)
+    
+    function handleCounterIncrement(){
+        setCounter(c => c + 1)
     }
+
+    function handleCounterReset() {
+        setCounter(initialValue)
+    }
+    
+    return(
+        <>
+        
+        <h2>Counter: {counter} </h2>
+        <button onClick={handleCounterIncrement}>Increment</button>
+        <button onClick={handleCounterReset}>Reset</button>
+        </>
+
+
+    )
 }
