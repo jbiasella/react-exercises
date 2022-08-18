@@ -1,6 +1,7 @@
 import React from "react";
 import { HookCounter} from "./Counter";
 import { GithubUser } from "./GitHubUser";
+import { GithubUserList } from "./GitHubUserList";
 import { LoginForm } from "./Login";
 // import {Hello} from "./Hello";
 // import {Welcome} from "./Welcome";
@@ -14,6 +15,7 @@ export function App(){
             <div>
                 <GithubUser username='jbiasella'/>
                 <HookCounter initialValue={2} onCounterChange={(counter)=>{console.log(`the counter is now ${counter}`)}}/>                <LoginForm/>
+                <GithubUserList />
             </div>
         )
     
