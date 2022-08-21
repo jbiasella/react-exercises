@@ -1,16 +1,14 @@
-import React, from "react";
+import { Route, Routes } from "react-router-dom";
 import { Welcome } from "./Welcome";
-import {Routes, Route} from 'react-router-dom';
-
 
 export function App() {
   return (
-    <>
-      <div>
-        <Routes>
-          <Route path ="/" element = {<Welcome name ="JONATHAN"/>}></Route>
-        </Routes>
-      </div>
-    </>
+    <div>
+      <Routes>
+        <Route path="/" element={<Welcome name="Erik"/>} />
+      </Routes>
+    </div>
   );
 }
+
+export default App;
