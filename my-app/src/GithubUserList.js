@@ -26,4 +26,5 @@ export function GithubUserList() {
           <Outlet />
 
     </>
-  )}
+  )
+}
