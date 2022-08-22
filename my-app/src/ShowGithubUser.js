@@ -4,7 +4,7 @@ import { GithubUser } from "./GithubUser";
 export function ShowGithubUser() {
   return (
     <div>
-      <GithubUser name="karimhaj" />
+      <GithubUser name="jbiasella" />
       <Link to="/">Back</Link>
     </div>
   );
