@@ -13,7 +13,7 @@ export function App() {
         <Link to="/users">githubUser</Link>
         <Link to="/counter">counter</Link>
       <Routes>
-        <Route path="/" element={<Welcome name="Erik"/>} />
+        <Route path="/" element={<Welcome name="Jbiasella"/>} />
         <Route path="users/" element={<GithubUserList />}>
         <Route index element={<h4>Add a user and select it</h4>} />
         <Route path=":username" element={<ShowGithubUser />} />
